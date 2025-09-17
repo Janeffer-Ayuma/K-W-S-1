@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyan Wildlife Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #159e19;
+            color: #1f3725;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            background-color:  #ffc0cb;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            padding: 1rem;
+        }
+
+        .image-caption h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-caption p {
+            font-size: 0.875rem;
+            color: #1f2937;
+        }
+        
+        .did-you-know {
+            background-color: #e5e7eb;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border-radius: 0.5rem;
+            font-style: italic;
+            font-size: 0.8rem;
+            color: #371f34;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 765px) {
+            .gallery-container {
+                padding: 1rem;
+            }
+            .gallery-item {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header and Navigation -->
+    <header class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold tracking-tight text-center md:text-left mb-4 md:mb-0">Kenyan Wildlife Gallery</h1>
+            <nav>
+                <ul class="flex space-x-4 md:space-x-8 text-sm md:text-base">
+                    <li><a href="#big5" class="hover:text-amber-400 transition-colors">Big 5</a></li>
+                    <li><a href="#birds" class="hover:text-amber-400 transition-colors">Birds</a></li>
+                    <li><a href="#marine" class="hover:text-amber-400 transition-colors">Marine Life</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4">
+        
+        <h2 id="big5" class="text-4xl font-extrabold text-center mb-8 text-gray-800">The Big 5 & More</h2>
+
+        <!-- The main Flexbox gallery container -->
+        <section class="gallery-container">
+            
+            <!-- Gallery Item 1: Lion -->
+            <div class="gallery-item rounded-xl">
+                <img src="lion.jpeg" alt="Lion">
+                <div class="image-caption">
+                    <h3>African Lion</h3>
+                    <p>King of the savanna, known for its majestic mane and powerful roar.</p>
+                    <div class="did-you-know">
+                        Did you know? A lion's roar can be heard from as far as 8 kilometers (5 miles) away!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2: Elephant -->
+            <div class="gallery-item rounded-xl">
+                <img src="elephat. jpeg.jpeg" alt="elephat">
+                <div class="image-caption">
+                    <h3>African Elephant</h3>
+                    <p>The largest living land animal, recognized by its long trunk and large ears.</p>
+                    <div class="did-you-know">
+                        Did you know? An elephant's trunk contains over 40,000 muscles, but no bones.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3: Leopard -->
+            <div class="gallery-item rounded-xl">
+                <img src="leopard.jpeg" alt="Leopard">
+                <div class="image-caption">
+                    <h3>African Leopard</h3>
+                    <p>A solitary and nocturnal cat, famous for its spotted coat and incredible stealth.</p>
+                    <div class="did-you-know">
+                        Did you know? Leopards are excellent climbers and often haul their prey into trees.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4: Giraffe -->
+            <div class="gallery-item rounded-xl">
+                <img src="raff.jpeg" alt="Giraffe">
+                <div class="image-caption">
+                    <h3>Maasai Giraffe</h3>
+                    <p>The tallest land animal, with unique coat patterns similar to human fingerprints.</p>
+                    <div class="did-you-know">
+                        Did you know? Giraffes only need to drink water once every few days.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5: Zebra -->
+            <div class="gallery-item rounded-xl">
+                <img src="zebra.jpeg" alt="Zebra">
+                <div class="image-caption">
+                    <h3>Plains Zebra</h3>
+                    <p>Known for its distinctive black and white stripes, each pattern is unique.</p>
+                    <div class="did-you-know">
+                        Did you know? A group of zebras is called a "dazzle."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6: Cheetah -->
+            <div class="gallery-item rounded-xl">
+                <img src="cheetah.jpeg" alt="Cheetah">
+                <div class="image-caption">
+                    <h3>Cheetah</h3>
+                    <p>The world's fastest land animal, capable of reaching speeds of 120 km/h.</p>
+                    <div class="did-you-know">
+                        Did you know? Cheetahs can accelerate from 0 to 96 km/h (60 mph) in just three seconds.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>&copy; 2025 Kenyan Wildlife. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
